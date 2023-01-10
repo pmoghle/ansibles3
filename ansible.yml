@@ -4,14 +4,15 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: 12bucket-1
+      name: 13bucket-1
       aws_access_key: AKIA36PG34ATC2GKMDMS
       aws_secret_key: 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
       state: present
       region: ap-south-1
       versioning: no
       tags:
-         name: 12bucket-1
+         name: 13bucket-1
          type: example
+      permission: private # acl: public-read
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
 
