@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: create S3 bucket
-    amazon.aws.s3_bucket:
+    s3_bucket:
       name: 15bucket-1
       aws_access_key: AKIA36PG34ATC2GKMDMS
       aws_secret_key: 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
@@ -16,8 +16,8 @@
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
       public_access:
           BlockPublicAcls: true
-          # IgnorePublicAcls: false
-          # BlockPublicPolicy: false
-          # RestrictPublicBuckets: false
+          IgnorePublicAcls: true
+          BlockPublicPolicy: true
+          RestrictPublicBuckets: true
       register: module_result
 
