@@ -9,7 +9,7 @@
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:::821359796262:user/*"
+                "arn:aws:::12bucket-1/mduser"
             ]
         }
     ]
