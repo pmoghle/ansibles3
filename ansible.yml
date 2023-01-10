@@ -5,7 +5,7 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: 15bucket-1
+      name: 16bucket-1
       aws_access_key: AKIA36PG34ATC2GKMDMS
       aws_secret_key: 2zngrYtw0KF+KHzzdl9ekPGzLMMzX1Btducb6i+z
       state: present
@@ -14,7 +14,7 @@
       tags:
          name: 16bucket-1
          type: example
-      public_access:
+     # public_access:
           BlockPublicAcls: true
           IgnorePublicAcls: true
           BlockPublicPolicy: true
