@@ -13,21 +13,21 @@
       tags:
          name: 12bucket-1
          type: example
-      policy: 
+      policy: " 
+        {
+          \"Version\": \"2012-10-17\",
+          \"Statement\": [
             {
-            \"Version\": \"2012-10-17\",
-            \"Statement\": [
-              {
-                \"Action\": [
-                  \"s3:PutObject\"
-                ],
-                \"Effect\": \"Allow\",
-                \"Resource\": \"arn:aws:s3:::821359796262:user/mduser",
-                \"Principal\": {
-                  \"AWS\": [
-                    \"821359796262\"
-                  ]
-                }
+              \"Action\": [
+              \"s3:PutObject\"
+              ],
+              \"Effect\": \"Allow\",
+              \"Resource\": \"arn:aws:s3:::821359796262:user/mduser",
+              \"Principal\": {
+                \"AWS\": [
+                  \"821359796262\"
+                ]
               }
-            ]
-          }"
+            }
+          ]
+        }"
