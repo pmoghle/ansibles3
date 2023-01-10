@@ -2,18 +2,22 @@
 - hosts: localhost
   connection: local
   tasks:
-  - name: create S3 bucket
-    s3_bucket:
-      name: 15bucket-1
-      aws_access_key: AKIA36PG34ATC2GKMDMS
-      aws_secret_key: 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
-      state: present
-      region: ap-south-1
-      versioning: no
-      tags:
-         name: 15bucket-1
-         type: example
-      policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
-      public_access:
-        BlockPublicAcls: true
+    - amazon.aws.s3_bucket:
+        name: create S3 bucket
+        name: 15bucket-1
+        aws_access_key: AKIA36PG34ATC2GKMDMS
+        aws_secret_key: 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
+        state: present
+        region: ap-south-1
+        versioning: no
+        tags:
+           name: 15bucket-1
+           type: example
+        policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
+        public_access:
+            BlockPublicAcls: true
+          # IgnorePublicAcls: false
+          # BlockPublicPolicy: false
+          # RestrictPublicBuckets: false
+       register: module_result
 
