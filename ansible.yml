@@ -13,6 +13,6 @@
       tags:
          name: 13bucket-1
          type: example
-      permission: private # acl: public-read
+      #permission: private # acl: public-read
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
 
