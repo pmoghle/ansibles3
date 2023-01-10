@@ -14,5 +14,6 @@
          name: 15bucket-1
          type: example
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
-      block_public_acls: true
+      public_access:
+        BlockPublicAcls: true
 
