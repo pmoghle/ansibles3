@@ -4,14 +4,14 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: qwertybucket
+      name: bucket-1
       aws_access_key: AKIA36PG34ATC2GKMDMS
       aws_secret_key: 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
       state: present
       region: ap-south-1
       versioning: no
       tags:
-         name: qwertybucket
+         name: bucket-1
          type: example
          policy: 
            {
@@ -25,7 +25,7 @@
                    "AWS": "arn:aws:iam::821359796262:user/msuser"
                    },
                  "Action": "s3:*",
-                 "Resource": "arn:aws:s3:::md12bucket/msuser"
+                 "Resource": "arn:aws:s3:::bucket-1/msuser"
                } 
              ]
            }
