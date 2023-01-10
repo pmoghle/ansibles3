@@ -13,38 +13,19 @@
       tags:
          name: qwertybucket
          type: example
-      policy: "
-        {
-    "Version": "2012-10-17",
-    "Statement": [
-       {
-          "Sid": "statement1",
-          "Effect": "Allow",
-          "Principal": {
-             "AWS": "arn:aws:iam::821359796262:user/msuser"
-          },
-          "Action": [
-             "s3:GetBucketLocation",
-             "s3:ListBucket"
-          ],
-          "Resource": [
-             "arn:aws:s3:::qwertybucket/msuser"
-          ]
-       },
-       {
-          "Sid": "statement2",
-          "Effect": "Allow",
-          "Principal": {
-             "AWS": "arn:aws:iam::821359796262:user/msuser"
-          },
-          "Action": [
-              "s3:GetObject"
-          ],
-          "Resource": [
-             "arn:aws:s3:::qwertybucket/msuser"
-          ]
-        }
-      ]
-    }" 
-
-  
+         policy: 
+           {
+             "Version": "2012-10-17",
+             "Id": "Policy1673355763950",
+             "Statement": [
+               {
+                 "Sid": "Stmt1673355761438",
+                 "Effect": "Allow",
+                 "Principal": {
+                   "AWS": "arn:aws:iam::821359796262:user/msuser"
+                   },
+                 "Action": "s3:*",
+                 "Resource": "arn:aws:s3:::md12bucket/msuser"
+               } 
+             ]
+           }
