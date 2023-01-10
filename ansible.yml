@@ -14,5 +14,5 @@
          name: 15bucket-1
          type: example
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
-      delete_public_access: False
+      public_access: false
 
