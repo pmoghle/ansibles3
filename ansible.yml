@@ -13,4 +13,38 @@
       tags:
          name: md12bucket
          type: example
+      policy: "
+        {
+    "Version": "2012-10-17",
+    "Statement": [
+       {
+          "Sid": "statement1",
+          "Effect": "Allow",
+          "Principal": {
+             "AWS": "arn:aws:iam::821359796262:user/msuser"
+          },
+          "Action": [
+             "s3:GetBucketLocation",
+             "s3:ListBucket"
+          ],
+          "Resource": [
+             "arn:aws:s3:::qwertybucket/msuser"
+          ]
+       },
+       {
+          "Sid": "statement2",
+          "Effect": "Allow",
+          "Principal": {
+             "AWS": "arn:aws:iam::821359796262:user/msuser"
+          },
+          "Action": [
+              "s3:GetObject"
+          ],
+          "Resource": [
+             "arn:aws:s3:::qwertybucket/msuser"
+          ]
+        }
+      ]
+    }" 
+
   
