@@ -11,9 +11,6 @@
           # BlockPublicPolicy: false
           # RestrictPublicBuckets: false
       register: module_result
-
-    - debug:
-        var: module_result
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
 
 
