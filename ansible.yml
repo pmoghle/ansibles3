@@ -14,5 +14,5 @@
          name: 14bucket-1
          type: example
       policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
-      acl: private # acl: public-read
+      delete_public_access: true
 
