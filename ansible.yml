@@ -13,5 +13,5 @@
       tags:
          name: 12bucket-1
          type: example
-      policy:  
+      policy: "{{ lookup( 'file','mybucket_policy.json' )}}"
 
